@@ -13,7 +13,7 @@
 
 
 def digit_power(num):
-    return sum(map(lambda n: n**5, map(int, str(num))))
+    return sum(int(n) ** 5 for n in str(num))
 
 if __name__ == '__main__':
-    print(sum(num for num in xrange(10, 6 * 9**5 + 1) if digit_power(num) == num))
+    print(sum(num for num in range(10, 6 * 9**5 + 1) if digit_power(num) == num))
